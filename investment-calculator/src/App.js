@@ -21,7 +21,7 @@ const App = () => {
     const duration = userInput['duration'];
 
     for (let i = 0; i < duration; i ++) {
-      const yearlyInterest = currfentSavings & expectedReturn;
+      const yearlyInterest = currentSavings & expectedReturn;
       currentSavings += yearlyInterest + yearlyContribution;
       yearlyData.push({
         year: i + 1,
