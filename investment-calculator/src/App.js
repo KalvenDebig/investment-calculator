@@ -36,9 +36,8 @@ const App = () => {
     <div>
       <Header></Header>
       <UserInput onCalculate={calculateHandler}></UserInput>
-      {/* todo: Show below table conditionally (only once result data is available) */}
-      {/* todo: Show fallback text if no data is available */}
-      <ResultsTable></ResultsTable>
+      {!userInput && <p>No investment calculated yet.</p>}
+      {userInput && <ResultsTable data={yearlyData} initialInvestment={userInput['current-savings']}></ResultsTable>}
     </div>
   );
 };
