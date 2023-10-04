@@ -10,7 +10,7 @@ const App = () => {
     setUserInput(userInput);
   };
 
-  // when userInput is changed, react will rerender this component
+  // when userInput is changed, React will rerender this component
   // therefore following code will be executed once userInput is changed
   const yearlyData = [];
 
@@ -21,7 +21,7 @@ const App = () => {
     const duration = userInput['duration'];
 
     for (let i = 0; i < duration; i ++) {
-      const yearlyInterest = currentSavings & expectedReturn;
+      const yearlyInterest = currentSavings * expectedReturn;
       currentSavings += yearlyInterest + yearlyContribution;
       yearlyData.push({
         year: i + 1,
